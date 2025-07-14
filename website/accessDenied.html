@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Wine Experience — Entry Point</title>
+  <link rel="stylesheet" href="style_accessDenied.css">
+</head>
+
+<body>
+  <header class="site-header">
+    <h1>Welcome to the Wine Experience</h1>
+  </header>
+
+  <canvas id="cryptoRain"></canvas>
+  <div class="main-content">
+  <div class="main-box">
+    <h2>Your Access Was Denied!</h2>
+    <h3>Invalid certificate or under age.</h3>
+   
+    <div class="options">
+      <button class="button" onclick="window.location.href='/ageProof.html'">
+        Generate Age Proof
+      </button>
+
+      <button class="button" onclick="window.location.href='/createCert.html'">
+        Create Digital Certificate
+      </button>
+
+      <!-- <button class="button" onclick="window.location.href ='https://35.208.165.116/'">
+        Over 18 Area
+      </button> -->
+    </div>
+  </div>
+</div>
+
+  <footer class="site-footer">
+    &copy; 2025 Wine Experience
+  </footer>
+
+  <script src="jscript/backgroundScript.js"></script>
+
+</body>
+</html>

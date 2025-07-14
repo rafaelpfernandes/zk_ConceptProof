@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Generate Age Proof</title>
+  <link rel="stylesheet" href="style_ageProof.css">
+</head>
+
+<body>
+  <canvas id="cryptoRain"></canvas>
+  <header class="site-header">
+    <h2>Generate Age Proof</h2>
+  </header>
+  <div class="main-content">
+  <div class="main-box">
+    <form method="post" action="/generate_proof">
+   	 <p>Please enter your age:</p>
+    	<input type="number" id="ageInput" name="ageInput" min="0" placeholder="Enter your age">
+    	<br></br>
+    	<button class="button" type="submit">Generate Proof</button>
+    	<p id="statusMsg"></p>
+    </form>
+  </div>
+  </div>
+  <footer class="site-footer">
+    &copy; 2025 Wine Experience
+  </footer>
+  <script src="jscript/backgroundScript.js"></script>
+</body>
+</html>

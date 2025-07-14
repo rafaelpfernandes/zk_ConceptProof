@@ -1,0 +1,185 @@
+html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background: #FFF5F5;
+  color: #1C1C1C;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+header, footer {
+  background-color: #6a0f1a;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  flex-shrink: 0;
+}
+
+.main-content {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center; /* or center, if you want it centered vertically */
+  padding: 2rem 1rem;
+}
+
+.main-box {
+  max-width: 600px;
+  width: 100%;
+  margin: 2rem auto;
+  padding: 1.5rem 1rem;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(107, 15, 26, 0.2);
+  text-align: center;
+  transition: box-shadow 0.3s ease;
+}
+
+.main-box:hover {
+  box-shadow: 0 12px 32px rgba(107, 15, 26, 0.35);
+}
+
+.main-box p {
+  margin-top: 0;
+  text-align: center;
+  color: #6a0f1a;
+ font-weight: bold;
+}
+
+input[type="number"] {
+  padding: 0.9rem 1rem;
+  width: 100%;
+  max-width: 240px;
+  font-size: 1.1rem;
+  border: 1.5px solid #ccc;
+  border-radius: 8px;
+  box-sizing: border-box;
+  text-align: center;
+  transition: border-color 0.3s ease;
+}
+
+input[type="number"]:focus {
+  outline: none;
+  border-color: #6a0f1a;
+  box-shadow: 0 0 8px rgba(106, 15, 26, 0.4);
+}
+
+.imagem-vinho img {
+  max-width: 80%;
+  display: block;
+  margin: 0 auto 1.5rem auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  position: relative;
+
+}
+
+#statusMsg {
+  margin-top: 1.8rem;
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #6a0f1a;
+}
+
+#cryptoRain {
+   position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.descricao {
+  margin-top: 0;
+  padding: 0 1rem 1rem 1rem;
+  font-size: 1.1rem;
+  line-height: 1.5;
+  color: black;
+}
+
+.green-stamp {
+  background-color: rgba(76, 175, 80, 0.7); /* Green color with 70% opacity */
+  color: white;
+  padding: 1rem 3rem; /* Increased padding for a larger stamp */
+  border-radius: 5px; /* More rectangular, less badge-like */
+  font-size: 1.2rem; /* Larger font size */
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px; /* Increased letter spacing */
+  display: inline-block;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Stronger shadow for more prominence */
+  border: 3px solid rgba(255, 255, 255, 0.8); /* White border for contrast and definition */
+
+  /* Centering and diagonal positioning */
+  position: absolute; /* Position relative to the .main-box */
+  top: 50%; /* Start at 50% from the top */
+  left: 50%; /* Start at 50% from the left */
+  transform: translate(-50%, -50%) rotate(-30deg); /* Move back by half its width/height, then rotate */
+  /* Changed rotation to -30deg for a slightly different diagonal angle */
+  z-index: 10; /* Ensures it's on top of other content */
+  pointer-events: none; /* Makes the stamp non-interactive, allowing clicks/selection on content below */
+}
+
+
+.green-stamp {
+  background-color: rgba(76, 175, 80, 0.7); /* Green color with 70% opacity */
+  color: white;
+  padding: 0.7rem 2.5rem; /* Reduced padding for a smaller stamp */
+  border-radius: 5px;
+  font-size: 1rem; /* Reduced font size */
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1.5px; /* Reduced letter spacing slightly */
+  display: inline-block;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  border: 3px solid rgba(255, 255, 255, 0.8); /* White border */
+
+  /* NEW: Inner black border using outline */
+  outline: 1px solid rgba(0, 0, 0, 0.5); /* 1px black outline with 50% opacity */
+  outline-offset: -4px; /* Positions the outline inside the border */
+
+  /* Centering and diagonal positioning */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-30deg);
+  z-index: 10;
+  pointer-events: none;
+}
+
+.green-stamp p {
+  margin: 0;
+  color: white;
+  white-space: nowrap;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .main-box {
+    margin: 1rem;
+    padding: 1rem;
+  }
+
+  input[type="number"], .button {
+    font-size: 1rem;
+    padding: 0.8rem 1.5rem;
+  }
+
+  /* Adjust stamp for smaller screens */
+  .green-stamp {
+    font-size: 0.9rem; /* Further reduced font size for mobile */
+    padding: 0.6rem 2rem; /* Further reduced padding for mobile */
+    letter-spacing: 1px;
+    transform: translate(-50%, -50%) rotate(-30deg);
+  }
+}
+

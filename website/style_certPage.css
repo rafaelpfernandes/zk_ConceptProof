@@ -1,0 +1,101 @@
+html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background: #FFF5F5; /* MOVED THIS LINE HERE */
+  color: #1C1C1C;
+}
+
+body {
+  height: 100%; /* Keep this for flexbox to work */
+  margin: 0;
+  padding: 0;
+  /* font-family: sans-serif; - Already on html */
+  /* background: #FFF5F5; - REMOVE THIS LINE */
+  /* color: #1C1C1C; - Already on html */
+
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header, footer {
+  background-color: #6a0f1a;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  flex-shrink: 0;
+}
+
+.main-box {
+  flex: 1;
+  max-width: 800px;
+  width: 100%;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #ccc;
+}
+
+.main-box h2 {
+  margin-top: 0;
+  text-align: center;
+  color: #6a0f1a;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+label {
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="file"] {
+  padding: 0.7rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+input[type="file"] {
+  background-color: #f2f2f2;
+}
+
+.button {
+  align-self: center;
+  margin-top: 1.5rem;
+  padding: 0.8rem 2rem;
+  background-color: #6a0f1a;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #8c1a25;
+}
+
+footer {
+  margin-top: auto;
+}
+#cryptoRain {
+   position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-color: transparent;
+}
